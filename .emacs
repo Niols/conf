@@ -1,6 +1,13 @@
 ; .emacs
 ; Nicolas Jeannerod <niols@niols.net>
 
+; colors
+(defun terminal-init-screen ()
+  "Terminal initialization function for screen-256color."
+  (load "term/xterm")
+  (xterm-register-default-colors)
+  (tty-set-up-initial-frame-faces))
+
 ; personal load path
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
